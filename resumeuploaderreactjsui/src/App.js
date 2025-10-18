@@ -191,7 +191,7 @@ function App() {
                   <TableCell align="center">Location</TableCell>
                   <TableCell align="center">Avatar</TableCell>
                 </TableRow>
-              </TableHead>
+              </TableHead>  
               <TableBody>
                 {candidates.map((candidate, i) => (
                   <TableRow key={i}>
