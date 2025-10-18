@@ -1,22 +1,18 @@
 from django.db import models
 
-STATE_CHOICES = [
-        ('DHAKA', 'Dhaka'),
-        ('CHATTOGRAM', 'Chattogram'),
-        ('RAJSHAHI', 'Rajshahi'),
-        ('KHULNA', 'Khulna'),
-        ('BARISHAL', 'Barishal'),
-        ('SYLHET', 'Sylhet'),
-        ('RANGPUR', 'Rangpur'),
-        ('MYMENSINGH', 'Mymensingh'),
-    ]
+STATE_CHOICE = ((
+ ('Bihar','Bihar'),
+ ('Jharkhand','Jharkhand'),
+ ('West Bengal','West Bengal'),
+))
 
 class Profile(models.Model):
-    name = models.CharField(max_length=55)
-    email = models.EmailField()
-    dob = models.DateField(auto_now=False, auto_now_add=False)
-    state = models.CharField(choices= STATE_CHOICES, max_length=55)
-    gender = models.CharField(max_length=50)
-    location = models.CharField(max_length=50)
-    pimg = models.ImageField(upload_to='pimgs',blank=True)
-    rdoc = models.FileField(upload_to='rdocs',blank=True)
+  name= models.CharField(max_length=100)
+  email = models.EmailField()
+  dob = models.DateField(auto_now=False, auto_now_add=False)
+  state = models.CharField(choices=STATE_CHOICE, max_length=50)
+  gender= models.CharField(max_length=100)
+  location= models.CharField(max_length=100)
+  pimage = models.ImageField(upload_to='pimages', blank=True)
+  rdoc = models.FileField(upload_to='rdocs', blank=True)
+
