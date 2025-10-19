@@ -17,5 +17,9 @@ It allows users to **upload resumes**, **store profile information**, and **view
 - Django REST Framework  
 - SQLite (default)
 
+- Clone the Repository
+- git clone https://github.com/isamiul797-sketch/resumeuploaderdjangoreactjs.git
+
+
 
 
